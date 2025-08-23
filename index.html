@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadatak</title>
+  <style>
+    /* 1. Svi Google linkovi */
+    a[href*="google"] {
+      color: green;
+    }
+
+    /* 2. Link group sajt */
+    a[href*="link-group"] {
+      color: red;
+    }
+
+    /* 3. Paragrafi u second-div naizmenično */
+    #second-div p:nth-child(odd) {
+      color: red;
+    }
+
+    #second-div p:nth-child(even) {
+      color: blue;
+    }
+
+    /* 4. Dodaj NEW na paragrafe 2 i 3 */
+    p:nth-of-type(2)::after {
+      content: " NEW";
+      color: yellow;
+    }
+
+    p:nth-of-type(3)::after {
+      content: " NEW";
+      color: yellow;
+    }
+
+    /* 5. Hover na Paragraph 10 */
+    p:nth-of-type(10):hover {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Main Heading</h1>
+
+  <p>Paragraph 1</p>
+
+  <a href="https://www.google.com">Google</a>
+  <a href="https://doodles.google.com">Google Doodles</a>
+  <a href="https://www.link-group.eu">Goto Link Group</a>
+
+  <h2>Subheading</h2>
+
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+
+  <h3>Sub subheading</h3>
+
+  <!-- Ovo je second-div -->
+  <div id="second-div">
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <p>Paragraph 6</p>
+    <p>Paragraph 7</p>
+    <p>Paragraph 8</p>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
+  </div>
+</body>
+</html>
